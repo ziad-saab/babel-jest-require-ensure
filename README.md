@@ -1,2 +1,4 @@
 # babel-jest-require-ensure
-Make require.ensure work with jest and babel-jest
+
+1. Put this file somewhere in the root of your project in `jest-babel-custom.js`.
+2. Change your Jest config `transform` from `<rootDir>/node_modules/babel-jest` to `<rootDir>/jest-babel-custom.js`.
