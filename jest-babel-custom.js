@@ -1,3 +1,5 @@
+// Code by @sawyerh
+
 var babelJest = require('babel-jest');
 
 module.exports = {
