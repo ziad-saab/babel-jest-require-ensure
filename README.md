@@ -1,5 +1,7 @@
 # babel-jest-require-ensure
 
+The code is from [this issue comment](https://github.com/atecarlos/webpack-babel-jest/issues/12#issuecomment-221308100) by @sawyerh
+
 When using `require.ensure` for code-splitting with webpack, Jest will give you an error when it reaches that part of the code:
 
 ```
