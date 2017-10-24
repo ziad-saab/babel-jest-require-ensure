@@ -1,0 +1,9 @@
+{
+  "name": "babel-jest-require-ensure",
+  "version": "0.1.0",
+  "description": "A workaround to use dynamic imports with jest",
+  "main": "jest-babel-custom.js",
+  "repository": " ",
+  "author": "Ziad Saab <ziad.saab@gmail.com>",
+  "license": "MIT"
+}
