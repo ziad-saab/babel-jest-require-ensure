@@ -1,14 +1,30 @@
 # babel-jest-require-ensure
 
-The code is from [this issue comment](https://github.com/atecarlos/webpack-babel-jest/issues/12#issuecomment-221308100) by @sawyerh
-
 When using `require.ensure` for code-splitting with webpack, Jest will give you an error when it reaches that part of the code:
+This plugin adds the require.ensure function to the generated code for each file that doesn't have it defined.
 
 ```
 require.ensure is not a function
 ```
 
-Fix it like this:
 
-1. Put this file somewhere in the root of your project in `jest-babel-custom.js`.
-2. Change your Jest config `transform` from `<rootDir>/node_modules/babel-jest` to `<rootDir>/jest-babel-custom.js`.
+## Installation
+
+Using [npm](https://www.npmjs.com/):
+
+    $ npm install --save git://github.com/helielson/babel-jest-require-ensure.git
+
+Using [yarn](https://yarnpkg.com/en/):
+
+    $ yarn add git://github.com/helielson/babel-jest-require-ensure.git
+
+
+Then use the plugin as preprocessor on Jest config instead of `babel-jest`.
+
+```
+"jest": {
+  "transform": {
+    ".*": "./node_modules/babel-jest-require-ensure"
+  }
+}
+```
