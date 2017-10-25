@@ -1,11 +1,10 @@
 // Code by @sawyerh
 
-var babelJest = require('babel-jest');
+const babelJest = require('babel-jest');
 
 const createTransformer = options => {
   const preprocessor = babelJest.createTransformer(options);
   const process = preprocessor.process;
-  const getCacheKey = preprocessor.getCacheKey;
 
   function processWrapper() {
     const args = [].slice.call(arguments);
