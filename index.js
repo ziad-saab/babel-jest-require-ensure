@@ -8,7 +8,7 @@ const createTransformer = (options) => {
 
   function processWrapper() {
     const args = [].slice.call(arguments);
-    let processed = process.apply(null, args);
+    let processed = process.apply(null, args).code;
 
     if (processed.match(/require\.ensure\(/) && !processed.match(/require\.ensure =/))
       processed += 'if(typeof require.ensure !== "function") require.ensure = function(d, c) { c(require) };';

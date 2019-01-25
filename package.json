@@ -5,5 +5,8 @@
   "main": "jest-babel-custom.js",
   "repository": " ",
   "author": "Ziad Saab <ziad.saab@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "peerDependencies": {
+    "babel-jest": "^23"
+  }
 }
